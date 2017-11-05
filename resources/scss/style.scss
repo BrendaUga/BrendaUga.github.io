@@ -1,6 +1,145 @@
-$primary: #eee;
-body {
-    background: $primary;
-    display: flex;
+$primary-black: #030303;
+$primary-accent: #4d3eee;
 
+body {
+    margin: 0;
+    height: 3000px;
+
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+
+    /* background-image: url("https://n6-img-fp.akamaized.net/free-vector/hexagonal-pattern_1051-833.jpg?size=338&ext=jpg"); */
+}
+
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 15%;
+}
+
+.line {
+    width: 80px;
+    height: 3px;
+    background-color: $primary-black;
+    margin-bottom: 150px;
+}
+
+.hero-text {
+    width: 40%;
+    color: $primary-black;
+
+    h1, h2 {
+        line-height: 1.4;
+    }
+
+    h1 {
+        font-size: 3.5em;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+
+    h2 {
+        font-weight: 400;
+    }
+}
+
+.project {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 250px;
+
+    &:nth-child(even) {
+        margin-bottom: 180px;
+    }
+
+    &:last-child:not(:nth-child(even)) {
+        margin-bottom: 0;
+    }
+
+    &:nth-child(even) .project-image {
+        position: absolute;
+        right: 20px;
+        bottom: -50px;
+    }
+
+    &:nth-child(even) .project-info {
+        position: relative;
+        bottom: -100px;
+    }
+
+    &:nth-child(even) .project-letter {
+        position: absolute;
+        right: -100px;
+        width: 22%;
+        left: initial;
+    }
+}
+
+.project-image {
+    background-color: gray;
+    height: 550px;
+    width: 40%;
+    border-radius: 5px;
+}
+
+.project-info {
+    font-family: 'Rubik', sans-serif;
+    position: absolute;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 30px 100px 0px;
+    padding: 40px 35px;
+    width: 50%;
+    right: 20px;
+    bottom: -50px;
+    border-radius: 7px;
+
+    h2 {
+        width: 95%;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        margin-bottom: 25px;
+    }
+
+    p {
+        width: 93%;
+    }
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: $primary-accent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color: darken($primary-accent, 17%);
+        text-decoration: none;
+        transform: translateY(-1px);
+    }
+}
+
+.project-letter {
+    font-weight: 600;
+    color: $primary-accent;
+    font-size: 220px;
+    position: absolute;
+    bottom: 80px;
+    left: -40px;
+}
+
+.footer {
+    width: 100%;
+    padding-top: 200px;
+    text-align: center;
+
+    p {
+        margin-top: 10px;
+    }
 }
