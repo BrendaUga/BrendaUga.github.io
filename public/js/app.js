@@ -1,5 +1,7 @@
 window.onload = function () {
 
+  if (window.matchMedia("(min-width: 920px)").matches) {
+
     var CHECK_PADDING = 20;
     var windowHeight = window.innerHeight;
     var windowY = window.scrollY;
@@ -110,4 +112,6 @@ window.onload = function () {
 
         return 1 - scale;
     };
+
+  }
 };
