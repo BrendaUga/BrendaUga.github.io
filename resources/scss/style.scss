@@ -34,7 +34,7 @@ body {
     font-family: 'Poppins', sans-serif;
 
     @media all and (max-width: $breakpoint-sm) {
-        margin-top: 10%;
+        margin-top: 5%;
     }
 }
 
@@ -224,6 +224,7 @@ body {
         width: 90%;
         margin: -5em auto 0;
 		z-index: 1;
+		right: initial;
     }
 
 }
