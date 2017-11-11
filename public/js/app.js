@@ -1,5 +1,14 @@
 window.onload = function () {
 
+  window.addEventListener('resize', function(event) {
+    checkIfParallaxNeeded();
+  });
+
+  checkIfParallaxNeeded();
+};
+
+var checkIfParallaxNeeded = function() {
+
   if (window.matchMedia("(min-width: 920px)").matches) {
 
     var CHECK_PADDING = 20;
@@ -19,7 +28,7 @@ window.onload = function () {
     ];
 
     var animationInterval = setInterval(function () {
-        window.requestAnimationFrame(function () {
+        var animationFrame = window.requestAnimationFrame(function () {
             windowY = window.scrollY;
 
             animations.forEach(function (animation) {
@@ -114,4 +123,4 @@ window.onload = function () {
     };
 
   }
-};
+}

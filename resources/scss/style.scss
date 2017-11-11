@@ -29,7 +29,6 @@ footer, header, hgroup, menu, nav, section {
 
 body {
     margin: 0;
-    /*height: 3000px;*/
 
     background: #fff;
     font-family: 'Poppins', sans-serif;
@@ -37,24 +36,49 @@ body {
     @media all and (max-width: $breakpoint-sm) {
         margin-top: 10%;
     }
-
-    /* background-image: url("https://n6-img-fp.akamaized.net/free-vector/hexagonal-pattern_1051-833.jpg?size=338&ext=jpg"); */
 }
 
 .hero-section {
     width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-left: 15%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 
     @media all and (max-width: $breakpoint-sm) {
-        margin-left: 8%;
         margin-bottom: 15%;
     }
 }
+
+.hero-left {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding-left: 15%;
+}
+
+.hero-content {
+	z-index: 1;
+}
+
+.hero-image {
+	height: 90%;
+	width: 100%;
+	margin-left: -40%;
+
+    background-image: url("../img/hero.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+	opacity: 0.75;
+
+	@media all and (max-width: $breakpoint-sm) {
+		display: none;
+	}
+}
+
 
 .line {
     width: 80px;
@@ -68,8 +92,7 @@ body {
 }
 
 .hero-text {
-    width: 40%;
-    padding: 0 15px;
+    width: 75%;
     color: $primary-black;
 
     h1, h2 {
@@ -92,7 +115,7 @@ body {
     }
 
     @media all and (max-width: $breakpoint-sm) {
-        width: 90%;
+        width: 80%;
     }
 }
 
@@ -126,7 +149,9 @@ body {
         right: 0;
 
         @media all and (max-width: $breakpoint-sm) {
-            position: static;
+            position: relative;
+			z-index: 1;
+			bottom: -50px;
         }
 
         @media all and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
@@ -195,9 +220,10 @@ body {
     }
 
     @media all and (max-width: $breakpoint-sm) {
-        position: static;
+        position: relative;
         width: 90%;
         margin: -5em auto 0;
+		z-index: 1;
     }
 
 }
@@ -242,4 +268,9 @@ body {
     p {
         margin-top: 10px;
     }
+}
+
+.contact-icons a {
+    display: inline-block;
+    padding: 5px;
 }
