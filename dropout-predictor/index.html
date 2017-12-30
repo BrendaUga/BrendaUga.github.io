@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dropout predictor | Brenda Uga</title>
+    <meta name="description" content="A Bachelor's thesis student dropout predictor project showcase by Brenda Uga, a freelance UI/UX designer based in Estonia.">
+    <meta name="author" content="Brenda Uga">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600|Rubik:400" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <a href="../" class="top-link project-link">Brenda Uga</a>
+    </div>
+
+    <section class="single-project">
+        <h1 class="project-name">Predicting student dropout</h1>
+
+        <p class="project-description">
+            Developed as a Bachelor's thesis in Tallinn University of Technology, a web application was created that interfaced with the underlying machine learning algorithms, predicting student dropout. Data visualization techniques were used to offer both an overview and specific details on the prediction results.
+            <br><br> Python back-end with Scikit-learn and Tensorflow, front-end with HTML5/CSS3/JS.
+        </p>
+
+        <img src="../public/img/predictor-form.png" class="project-image__single" alt="Predictor system form screenshot">
+
+        <p class="project-description">
+            With dropout rates being a problem in most universities, a system was needed that could identify students at risk of discontinuing their education. This system used all the available information on students' grades, demographic information and course completion. Utilizing several algorithms, a predictor model was developed, that offered both a binary representation of dropout risk and risk factors in form of variable importances. The best-performing models reached accuracy and recall values above 90%.
+        </p>
+
+        <img src="../public/img/predictor-results.png" class="project-image__single" alt="Predictor system results screenshot">
+
+        <p class="project-description">
+            A second focus in this thesis was on visualizing the prediction results. A granular results view for each student was designed, that presents risk percentages and a binary decision from the algorithms. A dashboard with overview of the prediction results was also developed, to offer important information at a glance. The dashboard focused on offering an explanation for the results, showing feature importances and correlation between the most important variables and probabilities of dropout.
+        </p>
+
+        <img src="../public/img/predictor-viz.png" class="project-image__single" alt="Predictor system visualizations screenshot">
+
+        <p class="project-description">
+            Overall, the goal was to offer a tool to identify students at risk of dropping out. This information is useful for administrative personnel and departments, to provide support to students and to combat high rates of dropout.
+            <br><br> Development of this system is continuing with a refactor of the back-end to facilitate extensibility and a separate notification system for the at-risk students themselves.
+        </p>
+    </section>
+
+
+    <footer class="footer">
+        <div class="contact-icons">
+            <a href="mailto:brendauga@gmail.com">
+                <img src="../public/img/mail.svg" style="width:22px;height:auto;" alt="E-mail icon">
+            </a>
+            <a href="http://www.linkedin.com/in/brenda-uga">
+                <img src="../public/img/linkedin.svg" style="width:22px;height:auto;" alt="Linkedin icon">
+            </a>
+        </div>
+        <p>Brenda Uga © 2018</p>
+    </footer>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+</body>
+</html>

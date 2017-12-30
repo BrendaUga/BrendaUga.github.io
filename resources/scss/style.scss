@@ -1,5 +1,6 @@
 $primary-black: #030303;
 $primary-accent: #4d3eee;
+$body-text-grey: #787482;
 $breakpoint-sm: 920px;
 $breakpoint-md: 1200px;
 
@@ -38,6 +39,10 @@ body {
     }
 }
 
+/*********************************************\
+  FRONT PAGE HERO SECTION
+\*********************************************/
+
 .hero-section {
     width: 100%;
     height: 100vh;
@@ -67,6 +72,7 @@ body {
 	height: 90%;
 	width: 100%;
 	margin-left: -40%;
+	margin-top: -12%;
 
     background-image: url("../img/hero.png");
     background-size: contain;
@@ -79,11 +85,10 @@ body {
 	}
 }
 
-
 .line {
     width: 80px;
     height: 3px;
-    background-color: $primary-black;
+    background-color: $primary-accent;
     margin-bottom: 150px;
 
     @media all and (max-width: $breakpoint-sm) {
@@ -118,6 +123,10 @@ body {
         width: 80%;
     }
 }
+
+/*********************************************\
+  FRONT PAGE PROJECTS LIST
+\*********************************************/
 
 .project {
     position: relative;
@@ -177,8 +186,6 @@ body {
     @media all and (max-width: $breakpoint-sm) {
         margin-bottom: 100px;
     }
-
-
 }
 
 .project-image {
@@ -186,6 +193,16 @@ body {
     height: 550px;
     width: 40%;
     border-radius: 5px;
+	background-position: center center;
+	background-size: cover;
+
+	&.traveliou {
+		background-image: url("../img/traveliou-mobile.png");
+	}
+
+	&.predictor {
+		background-image: url("../img/predictor-viz-front.png");
+	}
 
     @media all and (max-width: $breakpoint-sm) {
         width: 100%;
@@ -226,7 +243,6 @@ body {
 		z-index: 1;
 		right: initial;
     }
-
 }
 
 .project-link {
@@ -261,10 +277,74 @@ body {
     }
 }
 
+/*********************************************\
+  SINGLE PROJECT PAGE
+\*********************************************/
+
+.top-bar {
+	width: 70%;
+	margin: 0 auto;
+	padding: 10px 0px;
+
+	@media all and (max-width: $breakpoint-sm) {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.top-link {
+	font-size: 1.2em;
+}
+
+.single-project {
+	width: 70%;
+	padding-top: 5%;
+	margin: 0 auto;
+
+	@media all and (max-width: $breakpoint-sm) {
+		width: 87%;
+	}
+}
+
+.project-name {
+	margin-bottom: 30px;
+}
+
+.project-description {
+	font-family: 'Rubik', sans-serif;
+	color: $body-text-grey;
+	font-size: 0.9em;
+	width: 60%;
+	line-height: 1.6em;
+	letter-spacing: 0.1px;
+
+	&:not(:first-of-type) {
+		width: 100%;
+	}
+
+	@media all and (max-width: $breakpoint-sm) {
+		width: 100%;
+	}
+}
+
+.project-image__single {
+	max-width: 100%;
+    margin: 5% 0%;
+	border-radius: 5px;
+}
+
+/*********************************************\
+  FOOTER
+\*********************************************/
+
 .footer {
     width: 100%;
     padding: 200px 0 25px;
     text-align: center;
+
+	&:not(.front-footer) {
+		padding: 50px 0 25px;
+	}
 
     p {
         margin-top: 10px;
