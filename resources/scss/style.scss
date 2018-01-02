@@ -204,6 +204,10 @@ body {
 		background-image: url("../img/predictor-viz-front.png");
 	}
 
+	&.ained-ttu {
+		background-image: url("../img/ained-front.png");
+	}
+
     @media all and (max-width: $breakpoint-sm) {
         width: 100%;
         border-radius: 0;
@@ -341,6 +345,7 @@ body {
     width: 100%;
     padding: 200px 0 25px;
     text-align: center;
+	color: $body-text-grey;
 
 	&:not(.front-footer) {
 		padding: 50px 0 25px;
