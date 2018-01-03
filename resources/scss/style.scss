@@ -309,6 +309,10 @@ body {
 	span {
 		padding-left: 0.5%;
 	}
+
+	@media all and (max-width: $breakpoint-sm) {
+	    padding-left: 7%;
+	}
 }
 
 .single-project {
