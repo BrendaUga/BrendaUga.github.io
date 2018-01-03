@@ -297,7 +297,18 @@ body {
 }
 
 .top-link {
+	display: flex;
+    flex-direction: row;
+    align-items: center;
 	font-size: 1.2em;
+
+	img {
+		width: 20px;
+	}
+
+	span {
+		padding-left: 0.5%;
+	}
 }
 
 .single-project {
