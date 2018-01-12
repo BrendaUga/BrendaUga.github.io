@@ -5,6 +5,8 @@ window.onload = function () {
   });
 
   checkIfParallaxNeeded();
+
+  document.getElementsByClassName('fadeIn')[0].classList.remove('loading');
 };
 
 var checkIfParallaxNeeded = function() {
@@ -13,7 +15,6 @@ var checkIfParallaxNeeded = function() {
 
     var CHECK_PADDING = 20;
     var windowHeight = window.innerHeight;
-    var windowY = window.scrollY;
     var animations = [
         {
             selector: '.project-letter',
@@ -29,7 +30,6 @@ var checkIfParallaxNeeded = function() {
 
     var animationInterval = setInterval(function () {
         var animationFrame = window.requestAnimationFrame(function () {
-            windowY = window.scrollY;
 
             animations.forEach(function (animation) {
                 var $elems = document.querySelectorAll(animation.selector);
@@ -37,6 +37,8 @@ var checkIfParallaxNeeded = function() {
 
                 $elems.forEach(function ($elem) {
                     setNewPosition($elem, animation);
+
+                    $elem.classList.remove('hidden');
                 }, this);
             });
         });
