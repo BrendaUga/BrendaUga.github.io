@@ -7,6 +7,16 @@ window.onload = function () {
   checkIfParallaxNeeded();
 
   document.getElementsByClassName('fadeIn')[0].classList.remove('loading');
+
+  document.getElementById('copyBtn').addEventListener('click', function(element) {
+    var emailLink = document.querySelector('#email-text');
+    var range = document.createRange();
+    range.selectNode(emailLink);
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+
+    window.getSelection().removeAllRanges();
+  })
 };
 
 var checkIfParallaxNeeded = function() {
