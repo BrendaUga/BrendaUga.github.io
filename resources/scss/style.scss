@@ -195,6 +195,10 @@ body {
         @media all and (max-width: $breakpoint-sm) {
             position: static;
         }
+
+		@media all and (min-width: $breakpoint-lg) {
+			bottom: -150px;
+		}
     }
 
     &:nth-child(even) .project-info {
@@ -215,7 +219,7 @@ body {
 
     &:nth-child(even) .project-letter {
         position: absolute;
-        right: -14%; //-100px; before
+        right: -14%;
         width: 22%;
         left: initial;
 
@@ -279,8 +283,8 @@ body {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 30px 100px 0px;
     padding: 40px 35px;
     width: 50%;
-    right: 2%; //before 20px
-    bottom: -5%; // before -50px
+    right: 2%;
+    bottom: -5%;
     border-radius: 7px;
 
     h2 {
@@ -290,12 +294,16 @@ body {
         margin-bottom: 25px;
 
 		@media all and (min-width: $breakpoint-lg) {
-			font-size: 1.7em;
+			font-size: 1.25em;
 		}
     }
 
     p {
         width: 93%;
+
+		@media all and (min-width: $breakpoint-lg) {
+			font-size: 0.75em;
+		}
     }
 
     @media all and (max-width: $breakpoint-sm) {
@@ -308,6 +316,7 @@ body {
 
 	@media all and (min-width: $breakpoint-lg) {
 		padding: 60px 50px;
+		width: 40%;
 	}
 }
 
@@ -324,6 +333,10 @@ body {
         text-decoration: none;
         transform: translateY(-1px);
     }
+
+	@media all and (min-width: $breakpoint-lg) {
+		font-size: 0.75em;
+	}
 }
 
 .project-letter {
@@ -331,8 +344,8 @@ body {
     color: $primary-accent;
     font-size: 220px;
     position: absolute;
-    bottom: 8%; //before 80px;
-    left: -4%; // before -40px;
+    bottom: 8%;
+    left: -4%;
 	transition-property: all;
 
     @media all and (max-width: $breakpoint-sm) {
@@ -366,10 +379,6 @@ body {
 
 	img {
 		width: 20px;
-
-		@media all and (min-width: $breakpoint-lg) {
-			width: 24px;
-		}
 	}
 
 	span {
@@ -381,7 +390,7 @@ body {
 	}
 
 	@media all and (min-width: $breakpoint-lg) {
-		font-size: 1.6em;
+		font-size: 1em;
 		margin-top: 4%;
 	}
 }
@@ -421,7 +430,7 @@ body {
 	}
 
 	@media all and (min-width: $breakpoint-lg) {
-		font-size: 1.4em;
+		font-size: 0.75em;
 	}
 }
 
@@ -453,7 +462,7 @@ body {
         margin-top: 10px;
 
 		@media all and (min-width: $breakpoint-lg) {
-			font-size: 1.3em;
+			font-size: 0.7em;
 		}
     }
 
@@ -469,10 +478,6 @@ body {
 	img {
 		width: 22px;
     	height: auto;
-
-		@media all and (min-width: $breakpoint-lg) {
-			width: 40px;
-		}
 	}
 }
 
@@ -542,8 +547,8 @@ body {
 	}
 
 	@media all and (min-width: $breakpoint-lg) {
-		width: 40px;
-		height: 40px;
+		width: 18px;
+		height: 18px;
 	}
 }
 
