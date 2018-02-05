@@ -74,6 +74,14 @@ body {
 	padding: 0;
 }
 
+.no-display {
+	display: none !important;
+}
+
+.inline {
+	display: inline-block;
+}
+
 /*********************************************\
   FRONT PAGE HERO SECTION
 \*********************************************/
@@ -215,6 +223,10 @@ body {
         @media all and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
             left: 4%;
         }
+
+		@media all and (min-width: $breakpoint-lg) {
+			right: -7%;
+		}
     }
 
     &:nth-child(even) .project-letter {
@@ -317,6 +329,7 @@ body {
 	@media all and (min-width: $breakpoint-lg) {
 		padding: 60px 50px;
 		width: 40%;
+		right: 10%;
 	}
 }
 
@@ -446,7 +459,7 @@ body {
 
 .footer {
     width: 100%;
-    padding: 200px 0 25px;
+    padding: 200px 0 30px;
     text-align: center;
 	color: $body-text-grey;
 
@@ -466,6 +479,18 @@ body {
 		}
     }
 
+	a {
+		display: inline-block;
+		color: $primary-accent;
+		transition: all 100ms ease-in-out;
+
+		&:hover {
+			text-decoration: none;
+			color: darken($primary-accent, 17%);
+			transform: translateY(-1px);
+		}
+	}
+
 	@media all and (min-width: $breakpoint-lg) {
 		padding: 200px 0 50px;
 	}
@@ -482,11 +507,10 @@ body {
 }
 
 #copyBtn {
-	display: block;
+	display: inline-block;
 	position: relative;
-	margin-left: 7px;
 	cursor: pointer;
-
+	vertical-align: middle;
 
 	 &:before {
 	    content: '';
@@ -528,6 +552,10 @@ body {
 	    &:before, &:after {
 	      display: block;
 	    }
+
+		svg {
+			fill: $primary-accent;
+		}
 	  }
 
 	  &:active, &:focus {
@@ -541,10 +569,8 @@ body {
 
 #copyBtn svg {
 	fill: $body-text-grey;
+	transition: fill 100ms ease-in;
 
-	&:hover {
-		fill: darken($body-text-grey, 15%);
-	}
 
 	@media all and (min-width: $breakpoint-lg) {
 		width: 18px;
