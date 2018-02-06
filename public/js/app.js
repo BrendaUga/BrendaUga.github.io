@@ -83,6 +83,10 @@ var checkIfParallaxNeeded = function() {
         if (config.property === 'opacity') {
             $elem.style.opacity = value;
         }
+        if ($($elem).data('bg-src')) {
+          $elem.style.backgroundImage = 'url("' + $($elem).data('bg-src') + '")';
+        }
+
     };
 
 
