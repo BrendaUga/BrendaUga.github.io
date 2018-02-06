@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var cleancss = require('gulp-clean-css');
-var concat = require('gulp-concat');
+var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 
 gulp.task('sass', function() {
@@ -21,7 +21,9 @@ gulp.task('watch', function() {
 });
 
 gulp.task('scripts', function() {
-  gulp.src('public/js/*.js')
+  var jsMinifyLocation = ['public/js/*.js', '!public/js/*.min.js'];
+  gulp.src(jsMinifyLocation)
+    .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
     .pipe(gulp.dest('public/js'));
 });
