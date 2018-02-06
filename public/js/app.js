@@ -16,7 +16,11 @@ window.onload = function () {
     document.execCommand('copy');
 
     window.getSelection().removeAllRanges();
-  })
+  });
+
+  $('[data-bg-src]').each(function () {
+    this.style.backgroundImage = 'url("' + $(this).data('bg-src') + '")';
+  });
 };
 
 var checkIfParallaxNeeded = function() {
