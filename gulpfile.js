@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var cleancss = require('gulp-clean-css');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 
 gulp.task('sass', function() {
   gulp.src('resources/scss/*.scss')
@@ -18,4 +20,10 @@ gulp.task('watch', function() {
   gulp.watch('resources/scss/*.scss', ['sass']);
 });
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('scripts', function() {
+  gulp.src('public/js/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('public/js'));
+});
+
+gulp.task('default', ['sass', 'scripts', 'watch']);
