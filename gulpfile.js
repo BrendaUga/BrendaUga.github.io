@@ -4,6 +4,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var cleancss = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
 
 gulp.task('sass', function() {
   gulp.src('resources/scss/*.scss')
@@ -18,10 +19,11 @@ gulp.task('sass', function() {
 
 gulp.task('watch', function() {
   gulp.watch('resources/scss/*.scss', ['sass']);
+  gulp.watch('resources/js/app.js', ['scripts']);
 });
 
 gulp.task('scripts', function() {
-  var jsMinifyLocation = ['public/js/*.js', '!public/js/*.min.js'];
+  var jsMinifyLocation = ['resources/js/*.js', '!resources/js/*.min.js'];
   gulp.src(jsMinifyLocation)
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())

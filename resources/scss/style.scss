@@ -526,6 +526,10 @@ body {
 	    border-right: 8px solid $primary-black;
 		border-top: 8px solid transparent;
 		border-bottom: 8px solid transparent;
+
+		@media all and (max-width: $breakpoint-sm) {
+			display: none !important;
+		}
 	  }
 
 	  &:after {
@@ -545,6 +549,10 @@ body {
 
 	    background: $primary-black;
 	    border-radius: 3px;
+
+		@media all and (max-width: $breakpoint-sm) {
+			display: none !important;
+		}
 	  }
 
 	  &:hover {
@@ -577,6 +585,37 @@ body {
 		height: 18px;
 	}
 }
+
+#snackbar {
+	visibility: hidden;
+    min-width: 152px;
+    margin-left: -76px;
+    background-color: $primary-accent;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 40px;
+
+	&.show {
+		visibility: visible;
+		animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 40px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 40px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
 
 /*********************************************\
   MODAL
