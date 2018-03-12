@@ -1,6 +1,7 @@
 $primary-black: #030303;
 $primary-accent: #4d3eee;
 $body-text-grey: #787482;
+$body-text-rgba: rgba(0, 0, 0, 0.65);
 $breakpoint-sm: 920px; // below this are mobile devices and portrait tablets (use max-width)
 $breakpoint-md: 1280px; // landscape tablets and small laptops (use max width)
 $breakpoint-lg: 1920px; // min-width to target big screens
@@ -56,11 +57,11 @@ body {
 
 .fadeIn {
 	opacity: 1;
-	transition: transform 200ms ease-in-out, opacity 200ms ease-in;
+	transition: transform 250ms ease-in-out, opacity 250ms ease-in;
 
 	&.loading {
 		opacity: 0;
-		transform: translate3d(-20px, 0px, 0px);
+		transform: translate3d(-55px, 0px, 0px);
 	}
 }
 
@@ -217,7 +218,7 @@ body {
         @media all and (max-width: $breakpoint-sm) {
             position: relative;
 			z-index: 1;
-			bottom: -50px;
+			bottom: -10px;
         }
 
         @media all and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
@@ -262,21 +263,10 @@ body {
 	background-position: center center;
 	background-size: cover;
 
-	&.traveliou {
-		//background-image: url("../img/traveliou-mobile.png");
-	}
-
-	&.predictor {
-		//background-image: url("../img/predictor-viz-front.png");
-	}
-
-	&.ained-ttu {
-		//background-image: url("../img/ained-front.png");
-	}
-
     @media all and (max-width: $breakpoint-sm) {
         width: 100%;
         border-radius: 0;
+		filter: brightness(94%);
     }
 
     @media all and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
@@ -391,15 +381,17 @@ body {
 	font-size: 1.2em;
 
 	img {
-		width: 20px;
+		width: 17px;
 	}
 
 	span {
 		padding-left: 0.5%;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.8em;
 	}
 
 	@media all and (max-width: $breakpoint-sm) {
-	    padding-left: 7%;
+	    padding-left: 2%;
 	}
 
 	@media all and (min-width: $breakpoint-lg) {
@@ -420,19 +412,35 @@ body {
 
 .project-name {
 	margin-bottom: 30px;
+	font-weight: 700;
+	font-family: 'Poppins', sans-serif;
 
 	@media all and (min-width: $breakpoint-lg) {
 		font-size: 3em;
 	}
 }
 
-.project-description {
+.project-subheading {
+	text-transform: uppercase;
+    font-size: 1em;
+    margin: 3em 0 1.2em;
+	color: $primary-accent;
 	font-family: 'Rubik', sans-serif;
-	color: $body-text-grey;
-	font-size: 1em;
+	letter-spacing: 1px;
+
+	span {
+		color: $body-text-rgba;
+	}
+}
+
+.project-description {
+	font-family: 'Rubik', serif;
+	color: $body-text-rgba;
+	font-size: 1.1em;
 	width: 60%;
-	line-height: 1.6em;
+	line-height: 1.5em;
 	letter-spacing: 0.1px;
+	font-weight: 400;
 
 	&:not(:first-of-type) {
 		width: 100%;
@@ -449,8 +457,12 @@ body {
 
 .project-image__single {
 	max-width: 100%;
-	margin: 5% 0%;
+	margin: 5% 0 0;
 	border-radius: 5px;
+
+	+ .project-description {
+		margin: 5% 0 2%;
+	}
 }
 
 /*********************************************\
@@ -464,7 +476,7 @@ body {
 	color: $body-text-grey;
 
 	&:not(.front-footer) {
-		padding: 50px 0 25px;
+		padding: 60px 0 25px;
 
 		@media all and (min-width: $breakpoint-lg) {
 			padding: 75px 0 50px;
@@ -474,10 +486,28 @@ body {
     p {
         margin-top: 10px;
 
+		&.inline {
+			@media all and (max-width: $breakpoint-sm) {
+				display: block;
+			}
+		}
+
+		&.inline span {
+			@media all and (max-width: $breakpoint-sm) {
+				display: none;
+			}
+		}
+
 		@media all and (min-width: $breakpoint-lg) {
 			font-size: 0.7em;
 		}
     }
+
+	span {
+		@media all and (min-width: $breakpoint-lg) {
+			font-size: 0.7em;
+		}
+	}
 
 	a {
 		display: inline-block;
@@ -488,6 +518,10 @@ body {
 			text-decoration: none;
 			color: darken($primary-accent, 17%);
 			transform: translateY(-1px);
+		}
+
+		@media all and (min-width: $breakpoint-lg) {
+			font-size: 0.7em;
 		}
 	}
 
@@ -513,72 +547,76 @@ body {
 	vertical-align: middle;
 
 	 &:before {
-	    content: '';
-	    display: none;
-	    position: absolute;
-	    z-index: 9998;
-	    top: 50%;
-	    left: 100%;
-	    width: 0;
-	    height: 0;
-		margin-top: -11px;
+	     content: '';
+	     display: none;
+	     position: absolute;
+	     z-index: 9998;
+	     top: 50%;
+	     left: 100%;
+	     width: 0;
+	     height: 0;
+		 margin-top: -11px;
 
-	    border-right: 8px solid $primary-black;
-		border-top: 8px solid transparent;
-		border-bottom: 8px solid transparent;
+	     border-right: 8px solid $primary-black;
+		 border-top: 8px solid transparent;
+		 border-bottom: 8px solid transparent;
 
-		@media all and (max-width: $breakpoint-sm) {
-			display: none !important;
-		}
+		 @media all and (max-width: $breakpoint-sm) {
+		     display: none !important;
+		 }
 	  }
 
 	  &:after {
-	    content: 'Copy to Clipboard';
-	    display: none;
-	    position: absolute;
-	    z-index: 9999;
-	    top: -20%;
-	    left: 115%;
-	    width: 114px;
-	    height: 30px;
+	      content: 'Copy to Clipboard';
+	      display: none;
+	      position: absolute;
+	      z-index: 9999;
+	      top: -20%;
+	      left: 115%;
+	      width: 114px;
+	      height: 30px;
 
-	    color: #fff;
-	    font-size: 10px;
-	    line-height: 30px;
-	    text-align: center;
+	      color: #fff;
+	      font-size: 10px;
+	      line-height: 30px;
+	      text-align: center;
 
-	    background: $primary-black;
-	    border-radius: 3px;
+	      background: $primary-black;
+	      border-radius: 3px;
 
-		@media all and (max-width: $breakpoint-sm) {
-			display: none !important;
-		}
+		  @media all and (max-width: $breakpoint-sm) {
+		      display: none !important;
+		  }
 	  }
 
 	  &:hover {
 
-	    &:before, &:after {
-	      display: block;
-	    }
+	      &:before, &:after {
+	          display: block;
+	      }
 
-		svg {
-			fill: $primary-accent;
-		}
+	      svg {
+			  fill: $primary-accent;
+		  }
 	  }
 
 	  &:active, &:focus {
-	    outline: none;
+	      outline: none;
 
-	    &:after {
-	      content: 'Copied!';
-	    }
+	      &:after {
+	          content: 'Copied!';
+	      }
+	  }
+
+	  @media all and (max-width: $breakpoint-sm) {
+		  padding: 15px;
+    	  margin: -15px;
 	  }
 }
 
 #copyBtn svg {
 	fill: $body-text-grey;
 	transition: fill 100ms ease-in;
-
 
 	@media all and (min-width: $breakpoint-lg) {
 		width: 18px;

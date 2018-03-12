@@ -19,7 +19,7 @@
     <meta name="author" content="Brenda Uga">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600|Rubik:400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Rubik:400" rel="stylesheet">
     <link rel="stylesheet" href="../public/css/style.css">
 </head>
 
@@ -35,6 +35,7 @@
     <section class="single-project">
         <h1 class="project-name">Predicting student dropout</h1>
 
+        <h2 class="project-subheading"><span>01.</span> Background</h2>
         <p class="project-description">
             Developed as a Bachelor's thesis in Tallinn University of Technology, a web application was created that interfaced with the underlying machine learning algorithms, predicting student dropout. Data visualization techniques were used to offer both an overview and specific details on the prediction results.
             <br><br> Python back-end with Scikit-learn and Tensorflow, front-end with HTML5/CSS3/JS.
@@ -42,27 +43,38 @@
 
         <img src="../public/img/predictor-form.png" class="project-image__single" alt="Predictor system form screenshot">
 
+        <h2 class="project-subheading"><span>02.</span> Mission</h2>
         <p class="project-description">
-            With dropout rates being a problem in most universities, a system was needed that could identify students at risk of discontinuing their education. This system used all the available information on students' grades, demographic information and course completion. Utilizing several algorithms, a predictor model was developed, that offered both a binary representation of dropout risk and risk factors in form of variable importances. The best-performing models reached accuracy and recall values above 90%.
+            With dropout rates being a problem in most universities, a system was needed that could identify students at risk of discontinuing their education. A combined approach of machine learning and data visualization was chosen, to offer administrative personnel and academic staff means to identify student in need of additional counselling and support.
         </p>
 
+        <h2 class="project-subheading"><span>03.</span>Machine learning</h2>
+        <p class="project-description">
+            This aspect started with identifying any and all information, that could be an indicator in whether the student is at risk. A literature search and comparison on existing models in similar programs was conducted.
+            For this system, I decided to use all the available information on students' grades, demographic information and course completion.
+            <br><br>The choice of algorithm was decided by trial and error. For each of the algorithms, a predictor model was developed, that offered both a binary representation of dropout risk and risk factors in form of variable importances.
+            The best-performing models reached accuracy and recall values above 90%.
+        </p>
         <img src="../public/img/predictor-results.png" class="project-image__single" alt="Predictor system results screenshot">
 
+        <h2 class="project-subheading"><span>04.</span>Data visualization</h2>
         <p class="project-description">
-            A second focus in this thesis was on visualizing the prediction results. A granular results view for each student was designed, that presents risk percentages and a binary decision from the algorithms. A dashboard with overview of the prediction results was also developed, to offer important information at a glance. The dashboard focused on offering an explanation for the results, showing feature importances and correlation between the most important variables and probabilities of dropout.
+            A second focus in this thesis was on visualizing the prediction results. The aim was to design a view so that the machine learning results are presented in a simple layout and using terms everyone can understand.
+            <br><br>A granular results view for each student was designed, that presents risk percentages and a binary decision from the algorithms. A dashboard with overview of the prediction results was also developed, to offer important information at a glance. The dashboard focused on offering an explanation for the results, showing feature importances and correlation between the most important variables and probabilities of dropout.
         </p>
 
         <img src="../public/img/predictor-viz.png" class="project-image__single" alt="Predictor system visualizations screenshot">
 
+        <h2 class="project-subheading"><span>05.</span>Results</h2>
         <p class="project-description">
             Overall, the goal was to offer a tool to identify students at risk of dropping out. This information is useful for administrative personnel and departments, to provide support to students and to combat high rates of dropout.
-            <br><br> Development of this system is continuing with a refactor of the back-end to facilitate extensibility and a separate notification system for the at-risk students themselves.
+            <br><br> Development of this system is continuing with a refactor of the back-end to facilitate extensibility and a separate notification system for the at-risk students themselves. In a proposed study, I will study the effects different types of notification and motivation methods have on students, regarding their risk of dropping out.cd
         </p>
     </section>
 
 
-    <footer class="footer front-footer">
-        <p class="inline">© Brenda Uga &nbsp; | &nbsp;</p>
+    <footer class="footer">
+        <p class="inline">© Brenda Uga <span>&nbsp; | &nbsp;</span>
         <div class="inline">
             <span id="email-text">brendauga@gmail.com</span>
             <button id="copyBtn" class="no-style-btn">
