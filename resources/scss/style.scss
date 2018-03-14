@@ -455,13 +455,35 @@ body {
 	}
 }
 
-.project-image__single {
+.project-image__single, .project-image__double {
 	max-width: 100%;
 	margin: 5% 0 0;
 	border-radius: 5px;
+	cursor: pointer;
+	transition: filter 100ms ease-in-out;
+
+	&:hover {
+		filter: brightness(95%);
+	}
 
 	+ .project-description {
 		margin: 5% 0 2%;
+	}
+}
+
+.double-image-container {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+	margin-bottom: 2%;
+}
+
+.project-image__double {
+	max-width: 49%;
+
+	&:not(:first-of-type) {
+		margin-left: 2%;
 	}
 }
 
