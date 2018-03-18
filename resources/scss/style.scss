@@ -455,7 +455,7 @@ body {
 	}
 }
 
-.project-image__single, .project-image__double {
+.project-image__single, .project-image__double, .project-image__triple {
 	max-width: 100%;
 	margin: 5% 0 0;
 	border-radius: 5px;
@@ -479,8 +479,25 @@ body {
 	margin-bottom: 2%;
 }
 
+.triple-image-container {
+	margin-bottom: 2%;
+}
+
 .project-image__double {
 	max-width: 49%;
+
+	&:not(:first-of-type) {
+		margin-left: 2%;
+	}
+}
+
+.project-image__triple {
+	max-width: 31%;
+	max-height: 200px;
+
+	&.mobile {
+		max-height: initial;
+	}
 
 	&:not(:first-of-type) {
 		margin-left: 2%;

@@ -31,7 +31,7 @@ window.onload = function () {
     }
   });
 
-  var images = document.querySelectorAll(".project-image__single, .project-image__double");
+  var images = document.querySelectorAll(".project-image__single, .project-image__double, .project-image__triple");
 
   Array.prototype.forEach.call(images, function(image) {
     image.addEventListener('click', function() {
