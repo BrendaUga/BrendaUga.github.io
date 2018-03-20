@@ -481,6 +481,10 @@ body {
 
 .triple-image-container {
 	margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .project-image__double {
@@ -501,6 +505,10 @@ body {
 
 	&:not(:first-of-type) {
 		margin-left: 2%;
+	}
+
+	@media all and (min-width: $breakpoint-lg) {
+		max-height: 45vh;
 	}
 }
 
