@@ -88,29 +88,9 @@
 
     </div>
 
-    <footer class="footer front-footer">
-    <p class="inline">© Brenda Uga <span>&nbsp; | &nbsp;</span>
-    <div class="inline">
-        <span id="email-text">brendauga@gmail.com</span>
-        <button id="copyBtn" class="no-style-btn" aria-label="Copy email to clipboard">
-            <svg height="19" viewBox="0 0 24 24" width="19" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0h24v24H0z" fill="none"/>
-                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
-            </svg>
-        </button>
-    </div>
-    <div>
-        <a href="https://www.brenda.ee/CV.pdf" target="_blank" rel="noopener">My CV</a>
-        <span>&nbsp; | &nbsp;</span>
-        <a href="http://www.linkedin.com/in/brenda-uga" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-</footer>
+    @@include('resources/partials/footer.html', {"front-class": "front-footer"})
 
-
-    <div id="snackbar">
-    Copied!
-</div>
-
+    @@include('resources/partials/snackbar.html')
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
