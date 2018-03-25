@@ -420,30 +420,47 @@ body {
 	}
 }
 
-.project-subheading {
-	text-transform: uppercase;
-    font-size: 1em;
+.project-name + .project-subheading {
     margin: 3em 0 1.2em;
-	color: $primary-accent;
+}
+
+.project-subheading {
+	width: 80%;
+	margin: 3em auto 1.2em;
+
 	font-family: 'Rubik', sans-serif;
+	font-size: 1em;
+	text-transform: uppercase;
 	letter-spacing: 1px;
+
+	color: $primary-accent;
 
 	span {
 		color: $body-text-rgba;
 	}
+
+	@media all and (max-width: $breakpoint-sm) {
+		width: 100%;
+	}
 }
 
 .project-description {
+	width: 60%;
+
 	font-family: 'Rubik', serif;
 	color: $body-text-rgba;
 	font-size: 1.1em;
-	width: 60%;
+	font-weight: 400;
 	line-height: 1.5em;
 	letter-spacing: 0.1px;
-	font-weight: 400;
 
 	&:not(:first-of-type) {
-		width: 100%;
+		width: 75%;
+		margin: 0 auto;
+
+		@media all and (max-width: $breakpoint-sm) {
+			width: 100%;
+		}
 	}
 
 	@media all and (max-width: $breakpoint-sm) {
@@ -467,7 +484,7 @@ body {
 	}
 
 	+ .project-description {
-		margin: 5% 0 2%;
+		margin: 5% auto 2%;
 	}
 }
 
