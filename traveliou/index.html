@@ -55,14 +55,45 @@
 
         <h2 class="project-subheading"><span>02.</span> Mission</h2>
         <p class="project-description">
-            This project addresses the pain of splitting costs between parties during travels. Travellers often offer to pay for other parties to simplify the interactions with service providers in a foreign environment. Having to split dining bills at the table, dealing with language barriers and calculations is often a source of frustration for both parties involved.
+            This project addresses the pain of splitting costs between people during travels. Travellers often offer to pay for others to simplify the interactions with service providers in a foreign environment. Having to split dining bills at the table, dealing with language barriers and calculations is often a source of frustration for all parties involved.
             <br><br>
-            TravelIOU steps in to offer understanding of IOUs resulting from the scenarios described. When entering information on amounts, payers and owers, the system keeps track of who owes whom. Owed amounts are calculated to keep the amount of transactions to the minimum.
+            TravelIOU steps in to offer understanding of IOUs resulting from the scenarios described. When entering information on amounts, payers and owers, the system keeps track of who owes whom. Owed amounts are calculated to keep the amount of transactions required to pay off the debts to the minimum.
         </p>
 
         <img src="../public/img/traveliou-mobile.png" class="project-image__single" alt="TravelIOU project mobile dashboard">
 
-        <h2 class="project-subheading"><span>03.</span> Process</h2>
+        <h2 class="project-subheading"><span>03.</span> Process / Understanding</h2>
+        <p class="project-description">
+            The project started as a suggestion from a friend, who travels a lot with a large group of friends. We talked about the situations that arise, when friends offer to pay for others in order to save time and effort. For example, someone might offer to pay for a friend's bus ticket, because they have the exact amount of cash available right then and there; or someone might be forced to pay for others in a restaurant, because the restaurant is not willing to take separate payments for a variety of reasons. It was clear that in these situations, a lot of frustration could come out of language barriers in a foreign country, trying to mix and match foreign banknotes, and in the end remembering who paid what amounts and who owes whom.
+            <br><br>The key themes were identified as:
+        </p>
+        <ul class="list-items">
+            <li class="list-item">Cost splitting and paying for other people occurs often on travels, due to foreign environments and languages</li>
+            <li class="list-item">It is hard to remember the amounts owed by people</li>
+            <li class="list-item">People both owe to multiple people and are owed to by multiple people</li>
+            <li class="list-item">Calculating which payments to make to pay debts off is difficult</li>
+        </ul>
+        <p class="project-description">
+            <br>From there, we came up with an idea for an app to track the amounts paid and the debtors. The first order of business was to understand who the users might be and what would they look for in this app. For this, two personas were created to represent (1) a user based on the above-mentioned group of friends, who is interested in keeping track of the amounts owed, and especially finding out who owes them, and (2) a user, who would like to be reminded of their debts and to see how to pay off their debts with as little effort as possible.
+        </p>
+
+        <div class="double-image-container">
+            <img src="../public/img/traveliou-persona-1.png" class="project-image__double" alt="TravelIOU primary persona Margus">
+            <img src="../public/img/traveliou-persona-2.png" class="project-image__double" alt="TravelIOU secondary persona Eric">
+        </div>
+
+        <p class="project-description">
+            These personas helped envision the kind of people that should be addressed through the app. These personas were the foundation on which we could base and validate our ideas and concepts on.
+            <br><br>Using these personas and the input from my friend, I mapped the scenarios that the users represented by these personas undertake to achieve their goals. These scenarios helped to find the necessary functions that the app should have and to see what part the app might play in a typical trip-with-friends scenario. For example, we identified that trip managers would want to have an option to let the debtors mark their debts as paid, instead of the payers marking their debts as paid. This depends on the level of trust between trip participants, and the choice was given to the trip creator to make.
+        </p>
+
+        <div class="triple-image-container justify-around higher">
+            <img src="../public/img/traveliou-scenario-1.png" class="project-image__triple" alt="TravelIOU adding payment user scenario ">
+            <img src="../public/img/traveliou-scenario-2.png" class="project-image__triple" alt="TravelIOU paying debt user scenario">
+            <img src="../public/img/traveliou-scenario-3.png" class="project-image__triple" alt="TravelIOU creating trip user scenario">
+        </div>
+
+        <h2 class="project-subheading"><span>04.</span> Process / Design concept / First iteration</h2>
 
         <div class="triple-image-container">
             <img src="../public/img/traveliou-paper-1.png" class="project-image__triple" alt="TravelIOU first paper prototype">
@@ -71,9 +102,9 @@
         </div>
 
         <p class="project-description">
-            In this process, I started by sketching a preliminary idea of the app on paper. This paper prototype was then presented in a meeting with the stakeholders, and the main flows were played through. This resulted in first feedback and a lot of changes for us. For example, the stakeholders pointed out that it was unclear how to navigate to 'My payments', and that the app would benefit from adding a top-level bottom navigation bar. In addition, we together deemed it more intuitive to use natural language sentences in the UI, instead of just listing names and amounts. This was brought up to combat the unclear meanings behind the names (whether the person owes me or I owe them) and numbers.
+            After the requirements were identified in the above process, I started by sketching a preliminary idea of the app on paper. This paper prototype was then presented in a meeting with representatives from the group of travelling friends, and the main flows were played through. This resulted in first feedback and a lot of changes for us. For example, it was pointed out that it was unclear how to navigate to 'My payments', and that the app would benefit from adding a top-level bottom navigation bar. In addition, we together deemed it more intuitive to use natural language sentences in the UI, instead of just listing names and amounts. This was brought up to combat the unclear meanings behind the names (whether the person owes me or I owe them) and numbers.
         </p>
-        <!-- Add images of XD mockup -->
+
         <div class="triple-image-container">
             <img src="../public/img/traveliou-dashboard.png" class="project-image__triple mobile" alt="TravelIOU dashboard mockup">
             <img src="../public/img/traveliou-trip.png" class="project-image__triple mobile" alt="TravelIOU trip view mockup">
@@ -81,18 +112,19 @@
         </div>
         <p class="project-description">
             As the primary users are travellers on the go, a responsive mobile interface was primary. Thus, the project was developed with a mobile-first approach, focusing on mobile interactions. The interface comprises of a dashboard-style view of amounts owed to the user and amounts owed by the user, and a history of trips and payments. The user is able to quickly mark down payments and keep an eye on the amounts owed by all parties.
-            <br><br>An iterative design process was utilized with several meetings with the stakeholders in order to collect feedback. Prototypes were evaluated with both an heuristic approach and using the co-discovery method in walkthroughs.
+            <br><br>An iterative design process was utilized with several meetings with the representatives in order to collect feedback. Prototypes were evaluated with both a heuristic approach and using the co-discovery method in walkthroughs.
         </p>
 
-        <h2 class="project-subheading"><span>04.</span> Results</h2>
+        <h2 class="project-subheading"><span>05.</span> Results</h2>
         <p class="project-description">
-            For the final product, the above flows and interactions are currently being implemented. As this app is mainly used during travels and on mobile devices, a lot of effort went into designing it to be simple and usable, so the process of marking down payments is possible in difficult scenarios.
+            The project is undergoing a second iteration of the app design. For the final product, the above flows and interactions will be implemented both for a mobile app and a desktop webapp. As this app is mainly used during travels and on mobile devices, it is essential for the interactions and the design to be simple and usable, so the process of marking down payments is possible in difficult scenarios.
         </p>
     </section>
 
     <section class="bottom-nav">
         <div class="links-container">
-            <a href="../dropout-predictor/" class="prev-link">< Previous project </a>
+            <a href="#" class="prev-link"></a>
+            <a href="../ained/" class="next-link">Next project ></a>
         </div>
     </section>
 

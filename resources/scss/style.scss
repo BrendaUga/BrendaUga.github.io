@@ -256,12 +256,14 @@ body {
 }
 
 .project-image {
+	display: block;
     background-color: gray;
     height: $base-image-height;
     width: 40%;
     border-radius: 5px;
 	background-position: center center;
 	background-size: cover;
+	cursor: pointer;
 
     @media all and (max-width: $breakpoint-sm) {
         width: 100%;
@@ -289,11 +291,17 @@ body {
     bottom: -5%;
     border-radius: 7px;
 
+	a:hover {
+		text-decoration: none;
+	}
+
     h2 {
         width: 95%;
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
         margin-bottom: 25px;
+		color: $primary-black;
+		text-decoration: none;
 
 		@media all and (min-width: $breakpoint-lg) {
 			font-size: 1.25em;
@@ -350,6 +358,8 @@ body {
     bottom: 8%;
     left: -4%;
 	transition-property: all;
+	user-select: none;
+	pointer-events: none;
 
     @media all and (max-width: $breakpoint-sm) {
         display: none;
@@ -472,6 +482,29 @@ body {
 	}
 }
 
+.list-items {
+	width: 75%;
+	margin: 2% auto 0;
+	font-family: 'Rubik', serif;
+	color: $body-text-rgba;
+	font-size: 1.1em;
+	font-weight: 400;
+	line-height: 1.5em;
+	letter-spacing: 0.1px;
+
+	.list-item {
+	    margin-left: 5%;
+	}
+
+	@media all and (max-width: $breakpoint-sm) {
+		width: 100%;
+	}
+
+	@media all and (min-width: $breakpoint-lg) {
+		font-size: 0.75em;
+	}
+}
+
 .project-image__single, .project-image__double, .project-image__triple {
 	max-width: 100%;
 	margin: 5% 0 0;
@@ -502,6 +535,14 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+
+	&.justify-around {
+		justify-content: space-around;
+	}
+
+	&.higher .project-image__triple {
+		max-height: 260px;
+	}
 }
 
 .project-image__double {
@@ -544,6 +585,16 @@ body {
 
 	a {
 		color: $primary-accent;
+		transition: all 100ms ease-in-out;
+
+		&:hover {
+			text-decoration: none;
+			transform: translateY(-1px);
+		}
+	}
+
+	@media all and (max-width: $breakpoint-sm) {
+		width: 85%;
 	}
 
 }
