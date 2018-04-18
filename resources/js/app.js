@@ -26,8 +26,9 @@ window.onload = function () {
     window.getSelection().removeAllRanges();
 
     if (window.matchMedia("(max-width: 920px)").matches) {
-      console.log("doing snackbar");
       toggleSnackbar();
+    } else {
+      toggleTooltip();
     }
   });
 
@@ -68,7 +69,7 @@ var checkIfParallaxNeeded = function() {
         },
     ];
 
-    var animationInterval = setInterval(function () {
+    function animate() {
         var animationFrame = window.requestAnimationFrame(function () {
 
             animations.forEach(function (animation) {
@@ -81,8 +82,12 @@ var checkIfParallaxNeeded = function() {
                     $elem.classList.remove('hidden');
                 }, this);
             });
+            setTimeout(animate, 16);
         });
-    }, 10);
+
+    }
+
+    animate();
 
     /**
      * Calculates and sets the style value for the given element.
@@ -176,4 +181,13 @@ var toggleSnackbar = function() {
   setTimeout(function() {
     $('#snackbar').removeClass('show');
   }, 3000);
+}
+
+var toggleTooltip = function() {
+  var button = $("#copyBtn");
+  button.attr("data-content", "Copied!");
+
+  setTimeout(function() {
+    button.attr("data-content", "Copy to clipboard");
+  }, 10000);
 }

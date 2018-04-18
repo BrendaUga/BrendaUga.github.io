@@ -701,7 +701,7 @@ body {
 	  }
 
 	  &:after {
-	      content: 'Copy to Clipboard';
+	      content: attr(data-content);
 	      display: none;
 	      position: absolute;
 	      z-index: 9999;
@@ -736,10 +736,6 @@ body {
 
 	  &:active, &:focus {
 	      outline: none;
-
-	      &:after {
-	          content: 'Copied!';
-	      }
 	  }
 
 	  @media all and (max-width: $breakpoint-sm) {
